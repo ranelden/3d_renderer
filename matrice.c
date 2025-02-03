@@ -9,7 +9,6 @@ double degToRad(double degrees) {
     return degrees * (PI / 180.0);
 }
 
-void rotation(int** array, int n, char axe, double angle){
     
     double rad_angle = degToRad(angle);
     double COS = cos(rad_angle);
