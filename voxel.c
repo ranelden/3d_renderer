@@ -49,6 +49,7 @@ int** Convert_to_matrice(int*** model, int x_length, int y_length, int z_length,
         }
     }
 }
+
     return voxel_matrice;
 }
 
