@@ -9,7 +9,7 @@ double degToRad(double degrees) {
     return degrees * (PI / 180.0);
 }
 
-void Rotation_Matrix(int** array, int n, char axe, double angle){
+void Rotation_Matrix(int** array, unsigned int* n, char axe, double angle){
     
     double rad_angle = degToRad(angle);
     double COS = cos(rad_angle);
@@ -37,7 +37,7 @@ void Rotation_Matrix(int** array, int n, char axe, double angle){
         return NULL;
     }
     
-    for(int i = 0; i < n ; i++){
+    for(int i = 0; i < n* ; i++){
         
         int x = array[i];
         int y = array[i+1];
