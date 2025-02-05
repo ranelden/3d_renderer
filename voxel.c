@@ -10,7 +10,6 @@
                 if(model[Z][y][x]==1){
                     voxel_matrice = realloc(voxel_matrice, sizeof(int*)*(n+1))  // doit proteger malloc
                     voxel_matrice[n][0] =  x_length;
-                    voxel_matrice[n][1] =  y_length;
                     voxel_matrice[n][2] =  z_length;
                     n++;
 int** Convert_to_matrice(int*** model, int x_length, int y_length, int z_length, int* n) {
