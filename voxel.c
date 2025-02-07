@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+
 <<<<<<< HEAD
 double** Convert_to_matrice(int*** model, int x_length, int y_length, int z_length, unsigned int* n) {
     double** voxel_matrice = NULL; // Tableau 2D stockant des (x, y, z)
@@ -49,10 +50,11 @@ double** Convert_to_matrice(int*** model, int x_length, int y_length, int z_leng
     return voxel_matrice;
 }
 
-double** voxel_faces( double** matrice, unsigned int* n){
-    double** face_array = (double*) malloc( (*n) * sizeof(double*))
+double** voxel_inheritances( double** matrice, unsigned int* n){
+    double*** face_array = (double*) malloc( 6 * sizeof(double**))
     for( int i = 0 ; i < *n ; i++){
-        
+    }
+    double** point_array = (double*) malloc( 6 * sizeof(double**))   
     }
 }
 
