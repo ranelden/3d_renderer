@@ -49,7 +49,9 @@ double** Convert_to_matrice(int*** model, int x_length, int y_length, int z_leng
 
     return voxel_matrice;
 }
-
+double** voxel_surrounding_points(double x, double y, double z){
+    // trouver comment store les points
+}
 double** voxel_inheritances( double** matrice, unsigned int* n){
     double*** face_array = (double*) malloc( 6 * sizeof(double**))
     for( int i = 0 ; i < *n ; i++){
