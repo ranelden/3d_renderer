@@ -2,8 +2,13 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define F1 [1,2,3,4]
+#define F2 [5,6,7,8]
+#define F3 [1,4,8,5]
+#define F4 [2,3,7,6]
+#define F5 [1,2,6,5]
+#define F6 [4,3,7,8]
 
-<<<<<<< HEAD
 double** Convert_to_matrice(int*** model, int x_length, int y_length, int z_length, unsigned int* n) {
     double** voxel_matrice = NULL; // Tableau 2D stockant des (x, y, z)
     *n = 0; // Nombre de voxels actifs trouvés
@@ -49,14 +54,52 @@ double** Convert_to_matrice(int*** model, int x_length, int y_length, int z_leng
 
     return voxel_matrice;
 }
-double** voxel_surrounding_points(double x, double y, double z){
-    // trouver comment store les points
-}
-double** voxel_inheritances( double** matrice, unsigned int* n){
-    double*** face_array = (double*) malloc( 6 * sizeof(double**))
-    for( int i = 0 ; i < *n ; i++){
+
+double*** voxel_inheritances( double** matrice, unsigned int* n){
+    
+    double*** point_array = (double**) malloc( 8 * sizeof(double**))  
+    for (int i = 0; i < 8; i++){
+        point_array[i] = (double*) malloc((*n) * sizeof(double*))
+        for(int j = 0; j < (n*); j++){
+            point_array[i][j] = (double) malloc(3 * sizeof(double))
+        }
+    } 
+
+    for (int i = 0; i < (*n); i++){
+
+        point_array[0][i][0] = matrice[i][0] - (1/2);
+        point_array[0][i][1] = matrice[i][1] - (1/2);
+        point_array[0][i][2] = matrice[i][2] - (1/2);
+
+        point_array[1][i][0] = matrice[i][0] + (1/2);
+        point_array[1][i][1] = matrice[i][1] - (1/2);
+        point_array[1][i][2] = matrice[i][2] - (1/2);
+
+        point_array[2][i][0] = matrice[i][0] + (1/2);
+        point_array[2][i][1] = matrice[i][1] + (1/2);
+        point_array[2][i][2] = matrice[i][2] - (1/2);
+
+        point_array[3][i][0] = matrice[i][0] - (1/2);
+        point_array[3][i][1] = matrice[i][1] + (1/2);
+        point_array[3][i][2] = matrice[i][2] - (1/2);
+
+        point_array[4][i][0] = matrice[i][0] - (1/2);
+        point_array[4][i][1] = matrice[i][1] - (1/2);
+        point_array[4][i][2] = matrice[i][2] + (1/2);
+
+        point_array[5][i][0] = matrice[i][0] + (1/2);
+        point_array[5][i][1] = matrice[i][1] - (1/2);
+        point_array[5][i][2] = matrice[i][2] + (1/2);
+
+        point_array[6][i][0] = matrice[i][0] + (1/2);
+        point_array[6][i][1] = matrice[i][1] + (1/2);
+        point_array[6][i][2] = matrice[i][2] + (1/2);
+
+        point_array[7][i][0] = matrice[i][0] - (1/2);
+        point_array[7][i][1] = matrice[i][1] + (1/2);
+        point_array[7][i][2] = matrice[i][2] + (1/2);  
+
     }
-    double** point_array = (double*) malloc( 6 * sizeof(double**))   
-    }
+    
 }
 
